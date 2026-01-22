@@ -55,7 +55,9 @@ PostgreSQL (can be configured)
 
 SQLite (for local testing if needed)
 
-Project Structure
+## Project Structure
+
+```text
 bragboard_full_project/
 │
 ├── Backend - bragboard/
