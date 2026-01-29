@@ -5,11 +5,11 @@ pwd_context = CryptContext(
     deprecated="auto"
 )
 
-# bcrypt max password length = 72 bytes
+# bcrypt supports max 72 bytes
 def hash_password(password: str) -> str:
-    safe_password = password[:72]
-    return pwd_context.hash(safe_password)
+    if not password:
+        raise ValueError("Password cannot be empty")
+    return pwd_context.hash(password[:72])
 
 def verify_password(plain_password: str, hashed_password: str) -> bool:
-    safe_password = plain_password[:72]
-    return pwd_context.verify(safe_password, hashed_password)
+    return pwd_context.verify(plain_password[:72], hashed_password)
