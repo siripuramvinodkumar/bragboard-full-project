@@ -4,3 +4,6 @@ uploads/
 node_modules/
 .env
 venv/
+bragboard.db
+uvicorn
+dir
