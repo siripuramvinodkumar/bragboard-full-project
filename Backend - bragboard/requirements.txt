@@ -1,7 +1,6 @@
 fastapi
 uvicorn
 sqlalchemy
-python-multipart
-passlib[bcrypt]
 python-jose
-pydantic
+passlib[bcrypt]
+bcrypt==3.2.0
